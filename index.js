@@ -8,7 +8,6 @@ const { v4: uuidv4 } = require('uuid');// random unique Id
 const crypto = require('crypto');//  make new random key
 const NodeRSA = require('node-rsa');// encrypt data
 const axios = require('axios');
-const { url } = require('inspector');
 
 //constraint
 const PORT = 4040;
@@ -16,10 +15,10 @@ const PORT = 4040;
 const endpoint = "https://test-payment.momo.vn/gw_payment/transactionProcessor";
 const hostname = "https://test-payment.momo.vn";
 const path = "/gw_payment/transactionProcessor";
-const partnerCode = "MOMOGFND20210304";
+const partnerCode = " ";
 //register account  to get  accessKey/secrectKey 
-const accessKey = "lib17639ae0Y9ga8";
-const serectkey = "VNRRzhlIzQUWr8dc7R77amy5EQbLKzY4";
+const accessKey = "";
+const serectkey = "";
 const orderInfo = "pay with MoMo";
 const returnUrl = "https://localhost:4040/errorcheckout";
 const notifyurl = "https://callback.url/notify";
@@ -30,8 +29,6 @@ const requestType = "captureMoMoWallet"
 const extraData = "merchantName=;merchantId="   // merchantName/merchantId = StoreName/StoreId  to indentify your real strore if not 
 var iv = new Buffer(16); // 16 byte buffer with random data
 iv.fill(0); // fill with zeros
-
-
 // encrypt  bodyjson
 function encrypt_token(data) {
     var encipher = crypto.createCipheriv('aes-256-cbc', secretKey, iv),

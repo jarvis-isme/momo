@@ -1,6 +1,9 @@
 // import library 
 const express = require('express');
 const app = express();
+app.set('view engine','html');
+app.set('views','./');
+app.engine('html', require('ejs').renderFile)
 const { v4: uuidv4 } = require('uuid');// random unique Id
 const crypto = require('crypto');//  make new random key
 const NodeRSA = require('node-rsa');// encrypt data
@@ -78,11 +81,9 @@ var options = {
     accessKey: accessKey
 }
 
-app.get('/', (req, res) => {
-    res.send('<form action="checkout" method="POST"><input type="submit" value="Checkout"/></form>');
-});
+ 
 app.get('/',function(req,res) {
-    res.sendFile('checkout.html');
+    res.render('checkout.html');
 });
 app.post('/errorcheckout', (req, res) => {
     res.send('<h2>Timeout click to make new transaction</h2><form action="checkout" method="POST"><input type="submit" value="Checkout"/></form>');

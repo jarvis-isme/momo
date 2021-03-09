@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Shopping with Momo Payment</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="eCommerce HTML Template Free Download" name="keywords">
+    <meta content="eCommerce HTML Template Free Download" name="description">
+    <link href="img/favicon.ico" rel="icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400|Source+Code+Pro:700,900&display=swap"
+        rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="lib/slick/slick.css" rel="stylesheet">
+    <link href="lib/slick/slick-theme.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="bottom-bar">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <div class="logo">
+                        <a href="index.html">
+                            <img src="img\MoMo_Logo.png" alt="Logo">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="search">
+                        <input type="text" placeholder="Search" value="Làm thế nào để được 10 phẩy Giáo Làng">
+                        <button><i class="fa fa-search"></i></button>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="user">
+                        <a href="#" class="btn wishlist">
+                            <i class="fa fa-heart"></i>
+                            <span>(3)</span>
+                        </a>
+                        <a href="#" class="btn cart">
+                            <i class="fa fa-shopping-cart"></i>
+                            <span>(1)</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="breadcrumb-wrap">
+        <div class="container-fluid">
+            <ul class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Products</a></li>
+                <li class="breadcrumb-item active">Checkout</li>
+            </ul>
+        </div>
+    </div>
+    <div class="checkout">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="checkout-inner">
+                        <div class="billing-address">
+                            <h2>Billing Address</h2>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label>First Name</label>
+                                    <input class="form-control" type="text" placeholder="First Name"
+                                        value="Nguyễn Đăng">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Last Name"</label>
+                                    <input class="form-control" type="text" placeholder="Last Name" value="Khoa">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>E-mail</label>
+                                    <input class="form-control" type="text" placeholder="E-mail"
+                                        value="Khoakute123@gmail.com">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Mobile No</label>
+                                    <input class="form-control" type="text" placeholder="Mobile No" value="0367123456">
+                                </div>
+                                <div class="col-md-12">
+                                    <label>Address</label>
+                                    <input class="form-control" type="text" placeholder="Address"
+                                        value="Đại học FPTU HCMC, Quận 9 thành phố Thủ Đức">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>District</label>
+                                    <select class="custom-select">
+                                        <option selected>District 9</option>
+                                        <option>Afghanistan</option>
+                                        <option>Albania</option>
+                                        <option>Algeria</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label>City</label>
+                                    <input class="form-control" type="text" placeholder="City"
+                                        value="Thành Phố Thủ Đức">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>Ward</label>
+                                    <input class="form-control" type="text" placeholder="Linh Trung">
+                                </div>
+                                <div class="col-md-6">
+                                    <label>ZIP Code</label>
+                                    <input class="form-control" type="text" placeholder="ZIP Code">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="checkout-inner">
+                        <div class="checkout-summary">
+                            <h1>Cart Total</h1>
+                            <p>Total Price<span>100.000 <a style="color: red">VND</a></span></p>
+                            <p class="sub-total">Discount<span>0 <a style="color: red">VND</a></span></p>
+                            <p class="ship-cost">Shipping Cost<span>50.000 <a style="color: red">VND</a></span></p>
+                            <h2>Grand Total<span>150.000 <a style="color: red">VND</a></span></h2>
+                        </div>
+
+                        <div class="checkout-payment">
+                            <div class="payment-methods">
+                                <h1>Payment Methods</h1>
+                                <div class="payment-method">
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" id="payment-1" name="payment">
+                                        <label class="custom-control-label" for="payment-1">Momo Payment</label>
+                                    </div>
+                                    <div class="payment-content" id="payment-1-show">
+                                        <img src="img\MoMo_Logo.png" alt="" height="100" width="100">
+                                    </div>
+                                </div>
+                                <div class="payment-method">
+                                    <div class="custom-control custom-radio">
+                                        <input type="radio" class="custom-control-input" id="payment-5" name="payment">
+                                        <label class="custom-control-label" for="payment-5">Cash on Delivery</label>
+                                    </div>
+                                    <div class="payment-content" id="payment-5-show">
+                                        <p>
+                                            Thanh toán khi nhận hàng.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkout-btn">
+                                <button>Place Order</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/slick/slick.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
